@@ -1,0 +1,17 @@
+# no system junk
+.DS_Store
+._*
+
+# no python junk
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# no virtual environments
+venv/
+env/
+myenv/
+
+# no Jupyter Notebook checkpoints
+.ipynb_checkpoints/
