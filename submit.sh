@@ -6,6 +6,7 @@
 #SBATCH --output=/home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/out/job-%j.out
 #SBATCH --error=/home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/out/job-%j.err
 
+mkdir -p /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/out
 cd /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main
 source /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/myenv/local/bin/activate
 python main.py
