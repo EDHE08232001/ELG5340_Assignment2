@@ -80,7 +80,7 @@ def run_reinforce_experiment(seed: int, lr: float, gamma: float, cfg: dict):
         done       = False
 
         while not done:
-            sv      = jax.device_put(one_hot(obs, n_states))
+            sv      = jnp.asarray(one_hot(obs, n_states))
             logits  = mlp_forward(params, sv)
             probs   = np.array(jnp.exp(logits - jax.nn.logsumexp(logits)), dtype=np.float64)
             probs  /= probs.sum()  # renormalise for numerical safety
@@ -96,9 +96,9 @@ def run_reinforce_experiment(seed: int, lr: float, gamma: float, cfg: dict):
 
         returns = compute_returns(ep_rewards, gamma)
 
-        states_jax  = jax.device_put(np.array(ep_states,  dtype=np.float32))
-        actions_jax = jax.device_put(np.array(ep_actions, dtype=np.int32))
-        returns_jax = jax.device_put(returns)
+        states_jax  = jnp.asarray(np.array(ep_states,  dtype=np.float32))
+        actions_jax = jnp.asarray(np.array(ep_actions, dtype=np.int32))
+        returns_jax = jnp.asarray(returns)
 
         params, opt_state, _ = update_fn(
             params, opt_state, states_jax, actions_jax, returns_jax

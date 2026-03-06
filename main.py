@@ -13,6 +13,12 @@ import json
 import os
 import pickle
 
+# Use non-interactive backend for headless servers (clusters, Colab w/ GPU).
+# Remove or comment out the next two lines when running in an interactive
+# Jupyter environment where you want inline figure display.
+import matplotlib
+matplotlib.use("Agg")
+
 import yaml
 
 from src.experiments import run_all_experiments

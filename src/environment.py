@@ -1,3 +1,5 @@
+from typing import Optional
+
 import numpy as np
 import gymnasium as gym
 from gymnasium import spaces
@@ -29,7 +31,7 @@ class GridWorldEnv(gym.Env):
 
     _DELTAS = {UP: (-1, 0), DOWN: (1, 0), LEFT: (0, -1), RIGHT: (0, 1)}
 
-    def __init__(self, cfg_env: dict, seed: int | None = None):
+    def __init__(self, cfg_env: dict, seed: Optional[int] = None):
         super().__init__()
 
         self.grid_size       = cfg_env["grid_size"]

@@ -60,7 +60,7 @@ def run_dqn_experiment(seed: int, lr: float, gamma: float, cfg: dict):
 
     key           = jax.random.PRNGKey(seed)
     params        = init_mlp_params([n_states, hidden_dim, n_actions], key)
-    target_params = jax.tree.map(jnp.array, params)  # deep copy
+    target_params = jax.tree_util.tree_map(jnp.array, params)  # deep copy
 
     optimizer = optax.adam(lr)
     opt_state = optimizer.init(params)
@@ -90,7 +90,7 @@ def run_dqn_experiment(seed: int, lr: float, gamma: float, cfg: dict):
             if rng.random() < eps:
                 action = int(rng.integers(0, n_actions))
             else:
-                q_vals = mlp_forward(params, jax.device_put(sv))
+                q_vals = mlp_forward(params, jnp.asarray(sv))
                 action = int(jnp.argmax(q_vals))
 
             next_obs, reward, terminated, truncated, _ = env.step(action)
@@ -108,7 +108,7 @@ def run_dqn_experiment(seed: int, lr: float, gamma: float, cfg: dict):
                 )
 
             if global_step % tgt_freq == 0:
-                target_params = jax.tree.map(jnp.array, params)
+                target_params = jax.tree_util.tree_map(jnp.array, params)
 
         eps = max(eps_end, eps * eps_decay)
         episode_rewards.append(float(ep_reward))
