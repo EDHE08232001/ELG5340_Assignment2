@@ -1,3 +1,5 @@
+from typing import List
+
 import jax
 import jax.numpy as jnp
 from jax import vmap
@@ -12,7 +14,7 @@ def random_layer_params(m: int, n: int, key, scale: float = 1e-2):
     )
 
 
-def init_mlp_params(sizes: list[int], key):
+def init_mlp_params(sizes: List[int], key):
     """Initialise parameters for a fully-connected MLP with the given layer sizes."""
     keys = jax.random.split(key, len(sizes) - 1)
     return [

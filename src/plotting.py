@@ -11,7 +11,6 @@ import os
 import jax
 import jax.numpy as jnp
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 import numpy as np
 
 from src.environment import make_env
@@ -32,11 +31,11 @@ _ACTION_DY = {0: -0.35, 1:  0.35, 2:  0.00, 3:  0.00}
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
-def get_runs(results: dict, agent: str, key: str) -> list:
+def get_runs(results, agent, key):
     return [r["episode_rewards"] for r in results[agent][key]]
 
 
-def mean_and_se(runs: list):
+def mean_and_se(runs):
     """Return (mean, standard_error, x_indices) arrays."""
     min_len = min(len(r) for r in runs)
     arr  = np.array([r[:min_len] for r in runs])
@@ -46,7 +45,7 @@ def mean_and_se(runs: list):
     return mean, se, xs
 
 
-def get_best_key(results: dict, agent: str) -> str:
+def get_best_key(results, agent):
     """Return the hyperparameter key with the highest mean reward over the final 50 episodes."""
     best_key, best_val = None, -np.inf
     for key in results[agent]:
@@ -60,7 +59,7 @@ def get_best_key(results: dict, agent: str) -> str:
 
 # ── Learning-curve plots ──────────────────────────────────────────────────────
 
-def plot_mean_se(results: dict, plots_dir: str) -> None:
+def plot_mean_se(results, plots_dir):
     """Plot 1: Mean ± Standard Error for the best config of each algorithm."""
     fig, ax = plt.subplots(figsize=(10, 5))
 
@@ -83,22 +82,45 @@ def plot_mean_se(results: dict, plots_dir: str) -> None:
 
     p = os.path.join(plots_dir, "plot1_mean_se.png")
     plt.savefig(p, dpi=150, bbox_inches="tight")
-    plt.show()
+    plt.close(fig)
     print(f"Saved: {p}")
 
 
-def plot_individual_runs(results: dict, plots_dir: str) -> None:
+def plot_individual_runs(results, plots_dir):
     """Plot 2: All individual seed runs for the best config of each algorithm."""
+    # Random agent — no hyperparameter key, use "default"
+    agent = "random"
+    runs    = get_runs(results, agent, "default")
+    min_len = min(len(r) for r in runs)
+    cmap    = plt.get_cmap("tab10")
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+    for i, run in enumerate(runs):
+        seed = results[agent]["default"][i]["seed"]
+        ax.plot(run[:min_len], color=cmap(i / 10.0), alpha=0.75, label=f"seed {seed}")
+
+    ax.set_xlabel("Episode")
+    ax.set_ylabel("Episode Reward")
+    ax.set_title("RANDOM — All 10 Individual Runs")
+    ax.legend(fontsize=7, ncol=2)
+    ax.grid(True, alpha=0.3)
+    plt.tight_layout()
+
+    p = os.path.join(plots_dir, "plot2_individual_random.png")
+    plt.savefig(p, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"Saved: {p}")
+
+    # DQN and REINFORCE — use best hyperparameter config
     for agent in ["dqn", "reinforce"]:
         bk      = get_best_key(results, agent)
         runs    = get_runs(results, agent, bk)
         min_len = min(len(r) for r in runs)
-        cmap    = cm.get_cmap("tab10", len(runs))
 
         fig, ax = plt.subplots(figsize=(10, 5))
         for i, run in enumerate(runs):
             seed = results[agent][bk][i]["seed"]
-            ax.plot(run[:min_len], color=cmap(i), alpha=0.75, label=f"seed {seed}")
+            ax.plot(run[:min_len], color=cmap(i / 10.0), alpha=0.75, label=f"seed {seed}")
 
         ax.set_xlabel("Episode")
         ax.set_ylabel("Episode Reward")
@@ -109,11 +131,11 @@ def plot_individual_runs(results: dict, plots_dir: str) -> None:
 
         p = os.path.join(plots_dir, f"plot2_individual_{agent}.png")
         plt.savefig(p, dpi=150, bbox_inches="tight")
-        plt.show()
+        plt.close(fig)
         print(f"Saved: {p}")
 
 
-def plot_hyperparam_sensitivity(results: dict, cfg: dict, plots_dir: str) -> None:
+def plot_hyperparam_sensitivity(results, cfg, plots_dir):
     """Plot 3: Hyperparameter sensitivity across all (lr, gamma) combinations."""
     lrs    = cfg["hyperparameters"]["learning_rates"]
     gammas = cfg["hyperparameters"]["discount_factors"]
@@ -137,23 +159,23 @@ def plot_hyperparam_sensitivity(results: dict, cfg: dict, plots_dir: str) -> Non
     plt.tight_layout()
     p = os.path.join(plots_dir, "plot3_hyperparam_sensitivity.png")
     plt.savefig(p, dpi=150, bbox_inches="tight")
-    plt.show()
+    plt.close(fig)
     print(f"Saved: {p}")
 
 
 # ── Policy visualisation ──────────────────────────────────────────────────────
 
-def greedy_policy_grid(params, n_states: int, grid_size: int) -> np.ndarray:
+def greedy_policy_grid(params, n_states, grid_size):
     """Return a (grid_size, grid_size) array of greedy action indices."""
     policy = np.zeros((grid_size, grid_size), dtype=int)
     for s in range(n_states):
-        sv = jax.device_put(one_hot(s, n_states))
+        sv = jnp.asarray(one_hot(s, n_states))
         policy[s // grid_size, s % grid_size] = int(jnp.argmax(mlp_forward(params, sv)))
     return policy
 
 
-def plot_policy_heatmap(params, agent: str, hp_key: str,
-                        cfg_env: dict, seed: int, plots_dir: str) -> None:
+def plot_policy_heatmap(params, agent, hp_key,
+                        cfg_env, seed, plots_dir):
     """
     Visualise the greedy policy as arrows overlaid on a visit-count heatmap.
     The visit map is built by running the greedy policy for max_steps × 5 steps.
@@ -212,5 +234,5 @@ def plot_policy_heatmap(params, agent: str, hp_key: str,
 
     p = os.path.join(plots_dir, f"policy_{agent}_{hp_key}_seed{seed}.png")
     plt.savefig(p, dpi=150, bbox_inches="tight")
-    plt.show()
+    plt.close(fig)
     print(f"Saved: {p}")
