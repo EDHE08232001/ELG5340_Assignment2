@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --account=small            # which resource account to bill
-#SBATCH --partition=small          # which queue to join
-#SBATCH --gres=gpu:1               # request 1 GPU
-#SBATCH --time=24:00:00            # max runtime (HH:MM:SS)
-#SBATCH --output=out/job-%j.out    # stdout goes here (%j = job ID)
-#SBATCH --error=out/job-%j.err     # stderr goes here
+#SBATCH --account=small
+#SBATCH --partition=small
+#SBATCH --gres=gpu:1
+#SBATCH --time=24:00:00
+#SBATCH --output=/home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/out/job-%j.out
+#SBATCH --error=/home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/out/job-%j.err
 
-cd $HOME/hw2                       # go to your project folder
-source $HOME/myenv/bin/activate    # activate your Python environment
-python main.py                     # run your code
+cd /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main
+source /home/uottawa.o.univ/ehe058/myenv/bin/activate
+python main.py
