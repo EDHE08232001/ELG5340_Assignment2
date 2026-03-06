@@ -1,0 +1,314 @@
+Base directory : /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main
+Seeds          : 10 (base=42)
+Episodes       : 500
+============================================================
+Running Random Baseline
+============================================================
+--- Random | seed=42 ---
+  seed=42 | mean_reward=-14.0232
+--- Random | seed=43 ---
+  seed=43 | mean_reward=-14.8309
+--- Random | seed=44 ---
+  seed=44 | mean_reward=-14.3453
+--- Random | seed=45 ---
+  seed=45 | mean_reward=-14.3898
+--- Random | seed=46 ---
+  seed=46 | mean_reward=-14.5085
+--- Random | seed=47 ---
+  seed=47 | mean_reward=-14.3422
+--- Random | seed=48 ---
+  seed=48 | mean_reward=-14.4277
+--- Random | seed=49 ---
+  seed=49 | mean_reward=-14.2221
+--- Random | seed=50 ---
+  seed=50 | mean_reward=-14.5046
+--- Random | seed=51 ---
+  seed=51 | mean_reward=-14.4981
+============================================================
+Running DQN | lr=0.001 | gamma=0.9
+============================================================
+--- DQN | lr=0.001 | gamma=0.9 | seed=42 ---
+  seed=42 | mean_reward=-0.7172 | time=35.6s
+--- DQN | lr=0.001 | gamma=0.9 | seed=43 ---
+  seed=43 | mean_reward=-0.7768 | time=28.7s
+--- DQN | lr=0.001 | gamma=0.9 | seed=44 ---
+  seed=44 | mean_reward=-0.8890 | time=28.1s
+--- DQN | lr=0.001 | gamma=0.9 | seed=45 ---
+  seed=45 | mean_reward=-0.7874 | time=27.5s
+--- DQN | lr=0.001 | gamma=0.9 | seed=46 ---
+  seed=46 | mean_reward=-0.6468 | time=27.8s
+--- DQN | lr=0.001 | gamma=0.9 | seed=47 ---
+  seed=47 | mean_reward=-1.0091 | time=28.4s
+--- DQN | lr=0.001 | gamma=0.9 | seed=48 ---
+  seed=48 | mean_reward=-0.9688 | time=29.1s
+--- DQN | lr=0.001 | gamma=0.9 | seed=49 ---
+  seed=49 | mean_reward=-0.7923 | time=27.8s
+--- DQN | lr=0.001 | gamma=0.9 | seed=50 ---
+  seed=50 | mean_reward=-0.6242 | time=28.4s
+--- DQN | lr=0.001 | gamma=0.9 | seed=51 ---
+  seed=51 | mean_reward=-0.7551 | time=27.9s
+============================================================
+Running DQN | lr=0.001 | gamma=0.99
+============================================================
+--- DQN | lr=0.001 | gamma=0.99 | seed=42 ---
+  seed=42 | mean_reward=-1.0637 | time=31.1s
+--- DQN | lr=0.001 | gamma=0.99 | seed=43 ---
+  seed=43 | mean_reward=-1.2068 | time=32.6s
+--- DQN | lr=0.001 | gamma=0.99 | seed=44 ---
+  seed=44 | mean_reward=-1.0037 | time=31.5s
+--- DQN | lr=0.001 | gamma=0.99 | seed=45 ---
+  seed=45 | mean_reward=-1.1268 | time=31.4s
+--- DQN | lr=0.001 | gamma=0.99 | seed=46 ---
+  seed=46 | mean_reward=-0.9432 | time=30.7s
+--- DQN | lr=0.001 | gamma=0.99 | seed=47 ---
+  seed=47 | mean_reward=-1.2259 | time=32.9s
+--- DQN | lr=0.001 | gamma=0.99 | seed=48 ---
+  seed=48 | mean_reward=-0.9764 | time=31.1s
+--- DQN | lr=0.001 | gamma=0.99 | seed=49 ---
+  seed=49 | mean_reward=-0.8562 | time=29.6s
+--- DQN | lr=0.001 | gamma=0.99 | seed=50 ---
+  seed=50 | mean_reward=-0.9651 | time=30.4s
+--- DQN | lr=0.001 | gamma=0.99 | seed=51 ---
+  seed=51 | mean_reward=-0.9673 | time=31.4s
+============================================================
+Running DQN | lr=0.01 | gamma=0.9
+============================================================
+--- DQN | lr=0.01 | gamma=0.9 | seed=42 ---
+  seed=42 | mean_reward=-0.9268 | time=28.9s
+--- DQN | lr=0.01 | gamma=0.9 | seed=43 ---
+  seed=43 | mean_reward=-2.6588 | time=54.0s
+--- DQN | lr=0.01 | gamma=0.9 | seed=44 ---
+  seed=44 | mean_reward=-0.9882 | time=29.9s
+--- DQN | lr=0.01 | gamma=0.9 | seed=45 ---
+  seed=45 | mean_reward=-3.8249 | time=66.4s
+--- DQN | lr=0.01 | gamma=0.9 | seed=46 ---
+  seed=46 | mean_reward=-1.0412 | time=28.8s
+--- DQN | lr=0.01 | gamma=0.9 | seed=47 ---
+  seed=47 | mean_reward=-0.8555 | time=28.5s
+--- DQN | lr=0.01 | gamma=0.9 | seed=48 ---
+  seed=48 | mean_reward=-3.0459 | time=60.6s
+--- DQN | lr=0.01 | gamma=0.9 | seed=49 ---
+  seed=49 | mean_reward=-0.8170 | time=29.0s
+--- DQN | lr=0.01 | gamma=0.9 | seed=50 ---
+  seed=50 | mean_reward=-0.8568 | time=29.2s
+--- DQN | lr=0.01 | gamma=0.9 | seed=51 ---
+  seed=51 | mean_reward=-0.9924 | time=29.8s
+============================================================
+Running DQN | lr=0.01 | gamma=0.99
+============================================================
+--- DQN | lr=0.01 | gamma=0.99 | seed=42 ---
+  seed=42 | mean_reward=-3.5534 | time=65.5s
+--- DQN | lr=0.01 | gamma=0.99 | seed=43 ---
+  seed=43 | mean_reward=-3.5370 | time=63.3s
+--- DQN | lr=0.01 | gamma=0.99 | seed=44 ---
+  seed=44 | mean_reward=-2.2441 | time=44.7s
+--- DQN | lr=0.01 | gamma=0.99 | seed=45 ---
+  seed=45 | mean_reward=-3.7627 | time=75.0s
+--- DQN | lr=0.01 | gamma=0.99 | seed=46 ---
+  seed=46 | mean_reward=-3.0141 | time=56.9s
+--- DQN | lr=0.01 | gamma=0.99 | seed=47 ---
+  seed=47 | mean_reward=-1.7738 | time=39.3s
+--- DQN | lr=0.01 | gamma=0.99 | seed=48 ---
+  seed=48 | mean_reward=-4.6091 | time=78.5s
+--- DQN | lr=0.01 | gamma=0.99 | seed=49 ---
+  seed=49 | mean_reward=-1.3444 | time=36.6s
+--- DQN | lr=0.01 | gamma=0.99 | seed=50 ---
+  seed=50 | mean_reward=-1.5815 | time=38.6s
+--- DQN | lr=0.01 | gamma=0.99 | seed=51 ---
+  seed=51 | mean_reward=-2.6632 | time=59.3s
+============================================================
+Running DQN | lr=0.1 | gamma=0.9
+============================================================
+--- DQN | lr=0.1 | gamma=0.9 | seed=42 ---
+  seed=42 | mean_reward=-12.0260 | time=168.3s
+--- DQN | lr=0.1 | gamma=0.9 | seed=43 ---
+  seed=43 | mean_reward=-11.1380 | time=159.1s
+--- DQN | lr=0.1 | gamma=0.9 | seed=44 ---
+  seed=44 | mean_reward=-11.3429 | time=160.7s
+--- DQN | lr=0.1 | gamma=0.9 | seed=45 ---
+  seed=45 | mean_reward=-11.4075 | time=163.9s
+--- DQN | lr=0.1 | gamma=0.9 | seed=46 ---
+  seed=46 | mean_reward=-10.9548 | time=150.8s
+--- DQN | lr=0.1 | gamma=0.9 | seed=47 ---
+  seed=47 | mean_reward=-10.7129 | time=159.3s
+--- DQN | lr=0.1 | gamma=0.9 | seed=48 ---
+  seed=48 | mean_reward=-10.3990 | time=154.6s
+--- DQN | lr=0.1 | gamma=0.9 | seed=49 ---
+  seed=49 | mean_reward=-9.7053 | time=138.2s
+--- DQN | lr=0.1 | gamma=0.9 | seed=50 ---
+  seed=50 | mean_reward=-10.7998 | time=162.3s
+--- DQN | lr=0.1 | gamma=0.9 | seed=51 ---
+  seed=51 | mean_reward=-10.3814 | time=156.5s
+============================================================
+Running DQN | lr=0.1 | gamma=0.99
+============================================================
+--- DQN | lr=0.1 | gamma=0.99 | seed=42 ---
+  seed=42 | mean_reward=-11.1748 | time=143.3s
+--- DQN | lr=0.1 | gamma=0.99 | seed=43 ---
+  seed=43 | mean_reward=-11.6354 | time=154.3s
+--- DQN | lr=0.1 | gamma=0.99 | seed=44 ---
+  seed=44 | mean_reward=-11.3240 | time=145.9s
+--- DQN | lr=0.1 | gamma=0.99 | seed=45 ---
+  seed=45 | mean_reward=-10.6823 | time=145.0s
+--- DQN | lr=0.1 | gamma=0.99 | seed=46 ---
+  seed=46 | mean_reward=-10.6848 | time=138.7s
+--- DQN | lr=0.1 | gamma=0.99 | seed=47 ---
+  seed=47 | mean_reward=-11.0016 | time=150.1s
+--- DQN | lr=0.1 | gamma=0.99 | seed=48 ---
+  seed=48 | mean_reward=-11.9503 | time=155.1s
+--- DQN | lr=0.1 | gamma=0.99 | seed=49 ---
+  seed=49 | mean_reward=-10.0859 | time=118.3s
+--- DQN | lr=0.1 | gamma=0.99 | seed=50 ---
+  seed=50 | mean_reward=-11.0271 | time=149.2s
+--- DQN | lr=0.1 | gamma=0.99 | seed=51 ---
+  seed=51 | mean_reward=-9.9182 | time=131.9s
+============================================================
+Running REINFORCE | lr=0.001 | gamma=0.9
+============================================================
+--- REINFORCE | lr=0.001 | gamma=0.9 | seed=42 ---
+  seed=42 | mean_reward=-5.7417 | time=425.1s
+--- REINFORCE | lr=0.001 | gamma=0.9 | seed=43 ---
+  seed=43 | mean_reward=-5.8681 | time=378.3s
+--- REINFORCE | lr=0.001 | gamma=0.9 | seed=44 ---
+  seed=44 | mean_reward=-5.8711 | time=327.2s
+--- REINFORCE | lr=0.001 | gamma=0.9 | seed=45 ---
+  seed=45 | mean_reward=-5.7295 | time=338.3s
+--- REINFORCE | lr=0.001 | gamma=0.9 | seed=46 ---
+  seed=46 | mean_reward=-5.7386 | time=436.1s
+--- REINFORCE | lr=0.001 | gamma=0.9 | seed=47 ---
+  seed=47 | mean_reward=-5.9481 | time=340.7s
+--- REINFORCE | lr=0.001 | gamma=0.9 | seed=48 ---
+  seed=48 | mean_reward=-5.8464 | time=394.4s
+--- REINFORCE | lr=0.001 | gamma=0.9 | seed=49 ---
+  seed=49 | mean_reward=-5.8989 | time=307.5s
+--- REINFORCE | lr=0.001 | gamma=0.9 | seed=50 ---
+  seed=50 | mean_reward=-6.0483 | time=330.7s
+--- REINFORCE | lr=0.001 | gamma=0.9 | seed=51 ---
+  seed=51 | mean_reward=-6.0039 | time=283.7s
+============================================================
+Running REINFORCE | lr=0.001 | gamma=0.99
+============================================================
+--- REINFORCE | lr=0.001 | gamma=0.99 | seed=42 ---
+  seed=42 | mean_reward=-6.1060 | time=491.4s
+--- REINFORCE | lr=0.001 | gamma=0.99 | seed=43 ---
+  seed=43 | mean_reward=-7.0208 | time=292.1s
+--- REINFORCE | lr=0.001 | gamma=0.99 | seed=44 ---
+  seed=44 | mean_reward=-7.8316 | time=252.9s
+--- REINFORCE | lr=0.001 | gamma=0.99 | seed=45 ---
+  seed=45 | mean_reward=-5.5075 | time=204.7s
+--- REINFORCE | lr=0.001 | gamma=0.99 | seed=46 ---
+  seed=46 | mean_reward=-5.8177 | time=217.3s
+--- REINFORCE | lr=0.001 | gamma=0.99 | seed=47 ---
+  seed=47 | mean_reward=-5.6291 | time=194.3s
+--- REINFORCE | lr=0.001 | gamma=0.99 | seed=48 ---
+  seed=48 | mean_reward=-5.3153 | time=198.2s
+--- REINFORCE | lr=0.001 | gamma=0.99 | seed=49 ---
+  seed=49 | mean_reward=-5.4489 | time=190.2s
+--- REINFORCE | lr=0.001 | gamma=0.99 | seed=50 ---
+  seed=50 | mean_reward=-5.8931 | time=190.1s
+--- REINFORCE | lr=0.001 | gamma=0.99 | seed=51 ---
+  seed=51 | mean_reward=-5.9699 | time=195.6s
+============================================================
+Running REINFORCE | lr=0.01 | gamma=0.9
+============================================================
+--- REINFORCE | lr=0.01 | gamma=0.9 | seed=42 ---
+  seed=42 | mean_reward=-2.9343 | time=230.6s
+--- REINFORCE | lr=0.01 | gamma=0.9 | seed=43 ---
+  seed=43 | mean_reward=-3.0529 | time=229.6s
+--- REINFORCE | lr=0.01 | gamma=0.9 | seed=44 ---
+  seed=44 | mean_reward=-3.4453 | time=229.5s
+--- REINFORCE | lr=0.01 | gamma=0.9 | seed=45 ---
+  seed=45 | mean_reward=-3.2381 | time=227.8s
+--- REINFORCE | lr=0.01 | gamma=0.9 | seed=46 ---
+  seed=46 | mean_reward=-2.8775 | time=227.2s
+--- REINFORCE | lr=0.01 | gamma=0.9 | seed=47 ---
+  seed=47 | mean_reward=-2.9633 | time=233.2s
+--- REINFORCE | lr=0.01 | gamma=0.9 | seed=48 ---
+  seed=48 | mean_reward=-3.4170 | time=235.5s
+--- REINFORCE | lr=0.01 | gamma=0.9 | seed=49 ---
+  seed=49 | mean_reward=-2.3652 | time=190.2s
+--- REINFORCE | lr=0.01 | gamma=0.9 | seed=50 ---
+  seed=50 | mean_reward=-3.1074 | time=228.5s
+--- REINFORCE | lr=0.01 | gamma=0.9 | seed=51 ---
+  seed=51 | mean_reward=-3.0530 | time=230.1s
+============================================================
+Running REINFORCE | lr=0.01 | gamma=0.99
+============================================================
+--- REINFORCE | lr=0.01 | gamma=0.99 | seed=42 ---
+  seed=42 | mean_reward=-0.9060 | time=92.5s
+--- REINFORCE | lr=0.01 | gamma=0.99 | seed=43 ---
+  seed=43 | mean_reward=-1.0196 | time=93.7s
+--- REINFORCE | lr=0.01 | gamma=0.99 | seed=44 ---
+  seed=44 | mean_reward=-1.2543 | time=82.6s
+--- REINFORCE | lr=0.01 | gamma=0.99 | seed=45 ---
+  seed=45 | mean_reward=-0.3973 | time=82.4s
+--- REINFORCE | lr=0.01 | gamma=0.99 | seed=46 ---
+  seed=46 | mean_reward=-4.8305 | time=227.6s
+--- REINFORCE | lr=0.01 | gamma=0.99 | seed=47 ---
+  seed=47 | mean_reward=-0.6125 | time=71.5s
+--- REINFORCE | lr=0.01 | gamma=0.99 | seed=48 ---
+  seed=48 | mean_reward=-5.6473 | time=230.9s
+--- REINFORCE | lr=0.01 | gamma=0.99 | seed=49 ---
+  seed=49 | mean_reward=-2.7515 | time=122.5s
+--- REINFORCE | lr=0.01 | gamma=0.99 | seed=50 ---
+  seed=50 | mean_reward=-0.7317 | time=79.7s
+--- REINFORCE | lr=0.01 | gamma=0.99 | seed=51 ---
+  seed=51 | mean_reward=-1.0731 | time=101.6s
+============================================================
+Running REINFORCE | lr=0.1 | gamma=0.9
+============================================================
+--- REINFORCE | lr=0.1 | gamma=0.9 | seed=42 ---
+  seed=42 | mean_reward=-2.4862 | time=227.1s
+--- REINFORCE | lr=0.1 | gamma=0.9 | seed=43 ---
+  seed=43 | mean_reward=-4.3043 | time=227.0s
+--- REINFORCE | lr=0.1 | gamma=0.9 | seed=44 ---
+  seed=44 | mean_reward=-2.9795 | time=239.9s
+--- REINFORCE | lr=0.1 | gamma=0.9 | seed=45 ---
+  seed=45 | mean_reward=-2.4312 | time=227.2s
+--- REINFORCE | lr=0.1 | gamma=0.9 | seed=46 ---
+  seed=46 | mean_reward=-2.7155 | time=226.5s
+--- REINFORCE | lr=0.1 | gamma=0.9 | seed=47 ---
+  seed=47 | mean_reward=-3.2675 | time=231.9s
+--- REINFORCE | lr=0.1 | gamma=0.9 | seed=48 ---
+  seed=48 | mean_reward=-3.8643 | time=227.9s
+--- REINFORCE | lr=0.1 | gamma=0.9 | seed=49 ---
+  seed=49 | mean_reward=-0.5658 | time=107.3s
+--- REINFORCE | lr=0.1 | gamma=0.9 | seed=50 ---
+  seed=50 | mean_reward=-3.4328 | time=246.3s
+--- REINFORCE | lr=0.1 | gamma=0.9 | seed=51 ---
+  seed=51 | mean_reward=-5.6182 | time=230.6s
+============================================================
+Running REINFORCE | lr=0.1 | gamma=0.99
+============================================================
+--- REINFORCE | lr=0.1 | gamma=0.99 | seed=42 ---
+  seed=42 | mean_reward=-4.9119 | time=232.7s
+--- REINFORCE | lr=0.1 | gamma=0.99 | seed=43 ---
+  seed=43 | mean_reward=-10.8295 | time=241.2s
+--- REINFORCE | lr=0.1 | gamma=0.99 | seed=44 ---
+  seed=44 | mean_reward=-11.5375 | time=227.4s
+--- REINFORCE | lr=0.1 | gamma=0.99 | seed=45 ---
+  seed=45 | mean_reward=-10.4424 | time=227.6s
+--- REINFORCE | lr=0.1 | gamma=0.99 | seed=46 ---
+  seed=46 | mean_reward=-9.0827 | time=237.3s
+--- REINFORCE | lr=0.1 | gamma=0.99 | seed=47 ---
+  seed=47 | mean_reward=-15.2700 | time=238.8s
+--- REINFORCE | lr=0.1 | gamma=0.99 | seed=48 ---
+  seed=48 | mean_reward=-5.1341 | time=231.5s
+--- REINFORCE | lr=0.1 | gamma=0.99 | seed=49 ---
+  seed=49 | mean_reward=-9.2746 | time=228.0s
+--- REINFORCE | lr=0.1 | gamma=0.99 | seed=50 ---
+  seed=50 | mean_reward=-10.7350 | time=239.5s
+--- REINFORCE | lr=0.1 | gamma=0.99 | seed=51 ---
+  seed=51 | mean_reward=-0.2660 | time=54.5s
+Cleanup done.
+
+All results saved → /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/logs/results.json
+Saved: /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/plots/plot1_mean_se.png
+Saved: /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/plots/plot2_individual_random.png
+Saved: /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/plots/plot2_individual_dqn.png
+Saved: /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/plots/plot2_individual_reinforce.png
+Saved: /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/plots/plot3_hyperparam_sensitivity.png
+Saved: /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/plots/policy_dqn_lr0.001_gamma0.9_seed42.png
+Saved: /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/plots/policy_reinforce_lr0.01_gamma0.99_seed42.png
+
+All experiments and plots complete.

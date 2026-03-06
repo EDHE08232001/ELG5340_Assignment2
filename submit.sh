@@ -7,5 +7,5 @@
 #SBATCH --error=/home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/out/job-%j.err
 
 cd /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main
-source /home/uottawa.o.univ/ehe058/myenv/bin/activate
+source /home/uottawa.o.univ/ehe058/CSI5340_Assignment2-main/myenv/local/bin/activate
 python main.py
