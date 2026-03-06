@@ -1,4 +1,4 @@
-import jax
+import jax.numpy as jnp
 import numpy as np
 
 
@@ -28,14 +28,14 @@ class ReplayBuffer:
         self._size = min(self._size + 1, self.capacity)
 
     def sample(self, batch_size: int, rng: np.random.Generator):
-        """Return a random batch as JAX device arrays."""
+        """Return a random batch as JAX arrays."""
         idxs = rng.integers(0, self._size, size=batch_size)
         return (
-            jax.device_put(self.states[idxs]),
-            jax.device_put(self.actions[idxs]),
-            jax.device_put(self.rewards[idxs]),
-            jax.device_put(self.next_states[idxs]),
-            jax.device_put(self.dones[idxs]),
+            jnp.asarray(self.states[idxs]),
+            jnp.asarray(self.actions[idxs]),
+            jnp.asarray(self.rewards[idxs]),
+            jnp.asarray(self.next_states[idxs]),
+            jnp.asarray(self.dones[idxs]),
         )
 
     def __len__(self) -> int:

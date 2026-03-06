@@ -29,7 +29,7 @@ from src.plotting import (
     plot_mean_se,
     plot_policy_heatmap,
 )
-from src.utils import cleanup
+from src.utils import cleanup, seed_everything
 
 
 def load_config(path: str) -> dict:
@@ -53,6 +53,8 @@ def main() -> None:
 
     cfg  = load_config(os.path.join(base_dir, "config.yaml"))
     dirs = setup_dirs(base_dir)
+
+    seed_everything(cfg["seed_base"])
 
     print(f"Base directory : {base_dir}")
     print(f"Seeds          : {cfg['num_seeds']} (base={cfg['seed_base']})")
